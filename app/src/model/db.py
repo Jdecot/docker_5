@@ -1,14 +1,12 @@
 from abc import ABC
-import mysql.connector
 
-# import sys
-# sys.path.append(
-#     "C:/Users/ASTONLILLE012/OneDrive/Aston/Flask/demo_aston/venv/Lib/site-packages")
+# pip install mysql-connector-python
+import mysql.connector
 
 
 class DB(ABC):
     conn = mysql.connector.connect(
-        host='127.0.0.1',
+        host='mysql',
         user='root',
         password='root',
         database='beer',

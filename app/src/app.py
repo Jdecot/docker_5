@@ -1,18 +1,29 @@
-from flask import Flask
-from flask.templating import render_template
+# from flask import Flask
 
-#from model.continentModel import ContinentModel
+# app = Flask(name)
+
+
+# @app.route('/')
+# # route de base de l'application
+# def hello():
+#     return "Hello world"
+
+
+
+from flask import Flask, request
+from flask.templating import render_template
+from model.continentModel import ContinentModel
 from werkzeug.utils import redirect
 
 app = Flask(__name__)
 
-#continent = ContinentModel()
+continent = ContinentModel()
 URI = "localhost"
 
-@app.route("/hello")
-def hello():
-    return "hellow world"
-"""
+# @app.route("/")
+# def hello():
+#     return "hellow world"
+
 @app.route('/')
 def hello():
     result = continent.fetch_all_continent()
@@ -47,4 +58,3 @@ def update_continent():
     data = request.form
     continent.update_continent(data)
     return redirect('http://127.0.0.1:5010')
-    """
